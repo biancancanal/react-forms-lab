@@ -6,13 +6,13 @@ class TwitterMessage extends React.Component {
     super();
 
     this.state = {
-      remainingChars: this.maxChars
+      count: 280
     };
   }
 
   handleCharChange = event => {
     this.setState((state) => {
-      return {remainingChars: state.remainingChars - 1} 
+      return {count: this.state.count - 1} 
     })
     console.log(event.target.value.length)
   }
